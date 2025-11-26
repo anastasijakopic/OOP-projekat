@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_radnikOtkazujeRez">
+   <children>
+      <Button layoutX="704.0" layoutY="1.0" mnemonicParsing="false" onAction="#switchToRadNaBlagajni" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #FF0000;" text="X" />
+      <Label layoutX="210.0" layoutY="14.0" text="OTKAZIVANJE REZERVACIJE" textFill="#2f00ff">
+         <font>
+            <Font name="MS Outlook" size="29.0" />
+         </font>
+      </Label>
+      <Button fx:id="otkazite" layoutX="263.0" layoutY="445.0" mnemonicParsing="false" onAction="#otkazivanje" prefHeight="57.0" prefWidth="162.0" text="OTKAŽI REZERVACIJU">
+         <font>
+            <Font name="MS Outlook" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="42.0" layoutY="85.0" text="Molimo Vas da prvo popunite sljedeće podatke:">
+         <font>
+            <Font name="MS Outlook" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="159.0" text="Korisničko ime posjetioca:">
+         <font>
+            <Font name="MS Outlook" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="227.0" text="Lozinka posjetioca:">
+         <font>
+            <Font name="MS Outlook" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="korisnicko_imeTf" layoutX="245.0" layoutY="155.0" prefHeight="26.0" prefWidth="173.0" />
+      <PasswordField fx:id="passwordTf" layoutX="246.0" layoutY="223.0" prefHeight="26.0" prefWidth="173.0" />
+      <Button layoutX="105.0" layoutY="272.0" mnemonicParsing="false" onAction="#prikazRezervisanihKarata" prefHeight="42.0" prefWidth="219.0" text="PRIKAZ REZERVISANIH KARATA">
+         <font>
+            <Font name="MS Outlook" size="14.0" />
+         </font>
+      </Button>
+      <ListView fx:id="listaKarata" layoutX="442.0" layoutY="83.0" prefHeight="420.0" prefWidth="322.0" />
+   </children>
+</AnchorPane>

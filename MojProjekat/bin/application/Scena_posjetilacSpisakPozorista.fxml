@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656.0" prefWidth="935.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_posjetilacSpisakPozorista">
+   <children>
+      <Button layoutX="864.0" layoutY="-1.0" mnemonicParsing="false" onAction="#switchToNakonPrijavePosjetioca" prefHeight="26.0" prefWidth="71.0" style="-fx-background-color: #ff0000;" text="X" />
+      <Label layoutX="391.0" layoutY="10.0" text="REZERVACIJA" textFill="#3600f7">
+         <font>
+            <Font name="MS Outlook" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="64.0" prefHeight="22.0" prefWidth="153.0" text="Izaberite Pozorište">
+         <font>
+            <Font name="MS Outlook" size="18.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listaPozoriste" layoutX="12.0" layoutY="93.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="76.0" layoutY="293.0" mnemonicParsing="false" onAction="#potvrdaPozorista" text="POTVRDI">
+         <font>
+            <Font name="MS Outlook" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="label1" layoutX="26.0" layoutY="328.0" text="Izaberite predstavu koja će biti &#10;izvedena u narednom periodu u:" />
+      <ChoiceBox fx:id="listaPredstava" layoutX="26.0" layoutY="399.0" prefHeight="41.0" prefWidth="172.0" />
+      <Button fx:id="buttonPotvrdaPredstava" layoutX="31.0" layoutY="469.0" mnemonicParsing="false" onAction="#potvrdaPredstava" prefHeight="34.0" prefWidth="162.0" text="POTVRDI I SAZNAJ VIŠE&#10;        O PREDSTAVI">
+         <font>
+            <Font name="MS Outlook" size="10.0" />
+         </font>
+      </Button>
+      <Label fx:id="nestani6" layoutX="231.0" layoutY="66.0" prefHeight="18.0" prefWidth="130.0" text="Informacije o predstavi:" />
+      <Label fx:id="imePredstave1" layoutX="231.0" layoutY="84.0" text="Label" underline="true" />
+      <Label fx:id="nestani7" layoutX="230.0" layoutY="110.0" text="Naziv pozorišta:" />
+      <Label fx:id="imePozorista" layoutX="231.0" layoutY="128.0" text="Label" underline="true" />
+      <Label fx:id="nestani8" layoutX="231.0" layoutY="155.0" text="Žanr:" />
+      <Label fx:id="zanrLabela" layoutX="266.0" layoutY="155.0" text="Label" underline="true" />
+      <Label fx:id="nestani9" layoutX="231.0" layoutY="184.0" text="Cijena:" />
+      <Label fx:id="cijenaLabela" layoutX="272.0" layoutY="184.0" text="Label" underline="true" />
+      <Label fx:id="nestani10" layoutX="259.0" layoutY="461.0" text="   Izaberite termin&#10;izvodjenja predstave:" />
+      <ChoiceBox fx:id="choiceBoxTermini" layoutX="240.0" layoutY="515.0" prefWidth="150.0" />
+      <CheckBox fx:id="checkBoxBrojKarata" layoutX="237.0" layoutY="564.0" mnemonicParsing="false" onAction="#prikaziBrojSlobodnihKarata" text="Prikaži broj slobodnih karata" />
+      <Label fx:id="labelaBrojKarata" layoutX="310.0" layoutY="591.0" text="Label" />
+      <Label fx:id="nemaslkarata" layoutX="310.0" layoutY="616.0" text="Label" />
+      <Label fx:id="nestani11" layoutX="26.0" layoutY="547.0" text="Pogledajte sva izvodjenja&#10;predstave klikom na dugme" />
+      <Button fx:id="klikButton" layoutX="72.0" layoutY="587.0" mnemonicParsing="false" onAction="#klikScena" text="OVDJE!" />
+      <Label fx:id="nestani12" layoutX="723.0" layoutY="538.0" text="Unesite broj potrebih karata:" />
+      <TextField fx:id="textFieldBrojKarata" layoutX="724.0" layoutY="560.0" promptText="Broj karata:" />
+      <Button fx:id="potvrdaRezervacije" layoutX="709.0" layoutY="602.0" mnemonicParsing="false" onAction="#potvrdaRezervacije" text="POTVRDI REZERVACIJU">
+         <font>
+            <Font name="MS Outlook" size="15.0" />
+         </font>
+      </Button>
+      <ListView fx:id="listaGlumciPredstave" layoutX="238.0" layoutY="245.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="listaAutorPredstava" layoutX="699.0" layoutY="245.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="listaReziserPredstava" layoutX="467.0" layoutY="245.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="nestani1" layoutX="236.0" layoutY="220.0" text="Spisak predstava u kojem je glumio/la:" />
+      <Label fx:id="nestani3" layoutX="472.0" layoutY="220.0" text="Spisak predstava koje je režisirao/la:" />
+      <Label fx:id="nestani5" layoutX="698.0" layoutY="220.0" text="Spisak predstava koje je scenarisao/la:" />
+      <ChoiceBox fx:id="choiceBoxGlumci" layoutX="436.0" layoutY="150.0" prefHeight="26.0" prefWidth="130.0" />
+      <Label fx:id="nestani" layoutX="438.0" layoutY="93.0" text="Glumci predstave:" />
+      <Label fx:id="predstavinoIme" layoutX="436.0" layoutY="119.0" text="Label" underline="true" />
+      <Label fx:id="nestani2" layoutX="603.0" layoutY="93.0" text="Režiser predstave:" />
+      <Label fx:id="nestani4" layoutX="783.0" layoutY="93.0" text="Autor predstave:" />
+      <Label fx:id="predstavinoIme1" layoutX="603.0" layoutY="119.0" text="Label" underline="true" />
+      <Label fx:id="predstavinoIme11" layoutX="785.0" layoutY="119.0" text="Label" underline="true" />
+      <Label fx:id="imeRezisera" layoutX="603.0" layoutY="155.0" text="Label" />
+      <Label fx:id="imeAutora" layoutX="785.0" layoutY="155.0" text="Label" />
+      <CheckBox fx:id="checkBoxGlumac" layoutX="465.0" layoutY="461.0" mnemonicParsing="false" onAction="#prikaziPredstaveGlumca" text="Informacije o glumcu" />
+      <CheckBox fx:id="checkBoxReziser" layoutX="464.0" layoutY="494.0" mnemonicParsing="false" onAction="#prikaziPredstaveRezisera" text="Informacije o režiseru" />
+      <CheckBox fx:id="checkBoxAutor" layoutX="464.0" layoutY="529.0" mnemonicParsing="false" onAction="#prikaziPredstaveAutora" text="Informacije o autoru" />
+      <Label fx:id="labela" layoutX="26.0" layoutY="369.0" text="Label" />
+   </children>
+</AnchorPane>

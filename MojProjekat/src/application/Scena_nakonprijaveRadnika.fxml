@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_nakonPrijaveRadnika">
+   <children>
+      <Label layoutX="270.0" layoutY="14.0" text="DOBRODOŠLI!" textFill="#5400fc">
+         <font>
+            <Font name="MS Outlook" size="30.0" />
+         </font>
+      </Label>
+      <Button layoutX="631.0" layoutY="439.0" mnemonicParsing="false" onAction="#odjaviSe" text="Odjavite se">
+         <font>
+            <Font name="MS Outlook" size="14.0" />
+         </font>
+      </Button>
+      <TreeView fx:id="treeview" layoutX="464.0" layoutY="68.0" prefHeight="200.0" prefWidth="255.0" />
+      <Label layoutX="139.0" layoutY="57.0" text="Odaberite stavku:">
+         <font>
+            <Font name="MS Outlook" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="22.0" layoutY="102.0" mnemonicParsing="false" onAction="#radnikKreiraRadnika" prefHeight="46.0" prefWidth="172.0" text="Kreiraj novog radnika" />
+      <Button layoutX="22.0" layoutY="176.0" mnemonicParsing="false" onAction="#prikazSvihPredstava" prefHeight="46.0" prefWidth="172.0" text="Prikaz svih predstava" />
+      <Button layoutX="232.0" layoutY="176.0" mnemonicParsing="false" onAction="#dodajPredstavu" prefHeight="46.0" prefWidth="172.0" text="Dodajte novu predstavu" />
+      <Button layoutX="233.0" layoutY="102.0" mnemonicParsing="false" onAction="#kreirajNovoPozoriste" prefHeight="46.0" prefWidth="172.0" text="Kreiraj novo pozorište" />
+      <Label layoutX="521.0" layoutY="271.0" text="Informacije o korisniku">
+         <font>
+            <Font name="MS Outlook" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="232.0" layoutY="257.0" mnemonicParsing="false" onAction="#radNaBlagajni" prefHeight="46.0" prefWidth="172.0" text="Rad na blagajni" />
+      <Button layoutX="233.0" layoutY="338.0" mnemonicParsing="false" onAction="#prikazARG" prefHeight="46.0" prefWidth="172.0" text="Autori/Režiseri/Glumci" />
+      <Button layoutX="233.0" layoutY="416.0" mnemonicParsing="false" onAction="#prikazPredstavaUPrethodnom" prefHeight="46.0" prefWidth="172.0" text="Već izvođene predstave" />
+      <Button layoutX="18.0" layoutY="257.0" mnemonicParsing="false" onAction="#promjenaLozinke" prefHeight="46.0" prefWidth="172.0" text="Promjeni lozinku" />
+      <Button layoutX="18.0" layoutY="338.0" mnemonicParsing="false" onAction="#dodajIzvodjenjePredstave" prefHeight="46.0" prefWidth="172.0" text="Dodajte novo izvođenje" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="544.0" AnchorPane.topAnchor="338.0" />
+      <Button layoutX="18.0" layoutY="416.0" mnemonicParsing="false" onAction="#prikazPredstavaUNarednom" prefHeight="46.0" prefWidth="172.0" text="Naredne predstave" />
+   </children>
+</AnchorPane>

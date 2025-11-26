@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="838.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_radnikDodajePredstavu">
+   <children>
+      <Label layoutX="232.0" layoutY="10.0" text="DODAJTE NOVU PREDSTAVU" textFill="#2b00ff">
+         <font>
+            <Font name="MS Outlook" size="29.0" />
+         </font>
+      </Label>
+      <Button layoutX="754.0" layoutY="1.0" mnemonicParsing="false" onAction="#switchToNakonPrijaveRadnika" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #FF0000;" text="X" />
+      <Label layoutX="242.0" layoutY="60.0" text="Molimo Vas da prvo unesete podatke:">
+         <font>
+            <Font name="MS Outlook" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="216.0" layoutY="95.0" text="Unesite ime predstave:">
+         <font>
+            <Font name="MS Outlook" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_naziv" layoutX="419.0" layoutY="92.0" promptText="Ime predstave" />
+      <Label layoutX="216.0" layoutY="133.0" text="Unesite žanr predstave:">
+         <font>
+            <Font name="MS Outlook" size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBox" layoutX="418.0" layoutY="130.0" prefWidth="150.0" />
+      <Label layoutX="85.0" layoutY="170.0" text="Odaberite glumce:">
+         <font>
+            <Font name="MS Outlook" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="355.0" layoutY="170.0" text="Odaberite autore:">
+         <font>
+            <Font name="MS Outlook" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="623.0" layoutY="170.0" text="Odaberite režisera:">
+         <font>
+            <Font name="MS Outlook" size="16.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listaGlumci" layoutX="50.0" layoutY="190.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="listaAutori" layoutX="319.0" layoutY="190.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="listaReziseri" layoutX="590.0" layoutY="190.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="56.0" layoutY="390.0" mnemonicParsing="false" onAction="#dodajNovogGlumca" text="DODAJTE NOVOG GLUMCA">
+         <font>
+            <Font name="MS Outlook" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="325.0" layoutY="390.0" mnemonicParsing="false" onAction="#dodajNovogAutora" text="DODAJTE NOVOG AUTORA">
+         <font>
+            <Font name="MS Outlook" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="592.0" layoutY="390.0" mnemonicParsing="false" onAction="#dodajNovogRezisera" text="DODAJTE NOVOG REŽISERA">
+         <font>
+            <Font name="MS Outlook" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelime" layoutX="105.0" layoutY="424.0" text="Unesite ime:">
+         <font>
+            <Font name="MS Outlook" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelimeA" layoutX="377.0" layoutY="424.0" text="Unesite ime:">
+         <font>
+            <Font name="MS Outlook" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelimeR" layoutX="646.0" layoutY="424.0" text="Unesite ime:">
+         <font>
+            <Font name="MS Outlook" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_imeGlumca" layoutX="58.0" layoutY="442.0" prefHeight="26.0" prefWidth="187.0" promptText="Ime glumca" />
+      <TextField fx:id="tf_imeAutora" layoutX="326.0" layoutY="443.0" prefHeight="26.0" prefWidth="187.0" promptText="Ime autora" />
+      <TextField fx:id="tf_imeRezisera" layoutX="591.0" layoutY="443.0" prefHeight="26.0" prefWidth="197.0" promptText="Ime režisera" />
+      <Label fx:id="labelprezime" layoutX="89.0" layoutY="476.0" text="Unesite prezime:">
+         <font>
+            <Font name="MS Outlook" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelprezimeA" layoutX="361.0" layoutY="476.0" text="Unesite prezime:">
+         <font>
+            <Font name="MS Outlook" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelprezimeR" layoutX="630.0" layoutY="476.0" text="Unesite prezime:">
+         <font>
+            <Font name="MS Outlook" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_prezimeGlumca" layoutX="59.0" layoutY="494.0" prefHeight="26.0" prefWidth="187.0" promptText="Prezime glumca" />
+      <TextField fx:id="tf_prezimeAutora" layoutX="324.0" layoutY="494.0" prefHeight="26.0" prefWidth="187.0" promptText="Prezime autora" />
+      <TextField fx:id="tf_prezimeRezisera" layoutX="596.0" layoutY="494.0" prefHeight="26.0" prefWidth="187.0" promptText="Prezime režisera" />
+      <Button fx:id="buttonDodajGlumca" layoutX="93.0" layoutY="526.0" mnemonicParsing="false" onAction="#dodajGlumca" text="DODAJ GLUMCA">
+         <font>
+            <Font name="MS Outlook" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonDodajAutora" layoutX="361.0" layoutY="526.0" mnemonicParsing="false" onAction="#dodajAutora" text="DODAJ AUTORA">
+         <font>
+            <Font name="MS Outlook" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonDodajRezisera" layoutX="625.0" layoutY="526.0" mnemonicParsing="false" onAction="#dodajRezisera" text="DODAJ REŽISERA">
+         <font>
+            <Font name="MS Outlook" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="button_dodajPredstavu" layoutX="328.0" layoutY="574.0" mnemonicParsing="false" onAction="#dodajPredstavu" text="DODAJ PREDSTAVU">
+         <font>
+            <Font name="MS Outlook" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
